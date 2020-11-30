@@ -5,7 +5,7 @@ class Task extends Model {
     super.init(
       {
         description: Sequelize.STRING,
-        status: Sequelize.STRING,
+        status: Sequelize.ENUM('O', 'F', 'D'),
 
         date_initial: Sequelize.DATE,
         date_final: Sequelize.DATE,

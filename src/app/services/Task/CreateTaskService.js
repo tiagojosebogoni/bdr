@@ -1,6 +1,6 @@
 import Task from '../../models/Task';
 
-const statusTask = { OPEN: 'O', FINALLY: 'F', DOING: 'D' };
+export const statusTask = { OPEN: 'O', FINALLY: 'F', DOING: 'D' };
 
 class CreateTaskService {
   async execute({ description }) {
