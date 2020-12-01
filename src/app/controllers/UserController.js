@@ -7,9 +7,9 @@ class UserController {
   async store(req, res) {
     const createUserService = new CreateUserService();
 
-    const { name, email } = req.body;
+    const { name, email, admin } = req.body;
 
-    const user = await createUserService.execute({ name, email });
+    const user = await createUserService.execute({ name, email, admin });
 
     return res.json(user);
   }

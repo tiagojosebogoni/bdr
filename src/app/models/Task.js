@@ -1,14 +1,14 @@
-import Sequelize, { Model } from 'sequelize';
+import { Model, DataTypes } from 'sequelize';
 
 class Task extends Model {
   static init(sequelize) {
     super.init(
       {
-        description: Sequelize.STRING,
-        status: Sequelize.ENUM('O', 'F', 'D'),
+        description: DataTypes.STRING,
+        status: DataTypes.ENUM('O', 'F', 'D'),
 
-        date_initial: Sequelize.DATE,
-        date_final: Sequelize.DATE,
+        date_initial: DataTypes.DATE,
+        date_final: DataTypes.DATE,
       },
       {
         sequelize,

@@ -1,11 +1,15 @@
-import Sequelize, { Model } from 'sequelize';
+import { Model, DataTypes} from 'sequelize';
 
 class User extends Model {
   static init(sequelize) {
     super.init(
       {
-        name: Sequelize.STRING,
-        email: Sequelize.STRING,
+        name: DataTypes.STRING,
+        email: DataTypes.STRING,
+        admin: {
+          type: DataTypes.BOOLEAN,
+          defaultValue: false
+        },
       },
       {
         sequelize,

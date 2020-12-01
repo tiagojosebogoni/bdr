@@ -1,8 +1,8 @@
 import User from "../../models/User";
 
 class CreateUserService {
-  async execute({ name, email }) {
-    const user = await User.create({ name, email });
+  async execute({ name, email, admin }) {
+    const user = await User.create({ name, email, admin });
 
     return user;
   }
