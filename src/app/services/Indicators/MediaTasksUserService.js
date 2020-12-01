@@ -20,7 +20,6 @@ class MediaTasksUser {
           model: Task,
           as: 'tasks',
           attributes: [[sequelize.fn('COUNT', 'description'), 'Count']],
-          isAliased: 'aaa',
           where: {
             status: statusTask.FINALLY,
           },

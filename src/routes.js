@@ -21,6 +21,7 @@ routes.delete('/users/:id', UserController.delete);
 
 routes.get('/tasks', TaskController.index);
 
+routes.get('/indicators/perfomace/users', IndicatorController.performaceUsers);
 routes.get('/indicators/tasks/completed', IndicatorController.tasksCompleted);
 routes.get('/indicators/media/tasks/user', IndicatorController.mediaTasksUser);
 routes.get('/indicators/media/open/doing', IndicatorController.mediaOpenDoing);

@@ -2,6 +2,7 @@ import MediaTasksUserService from '../services/Indicators/MediaTasksUserService'
 import TaskCompletedService from '../services/Indicators/TaskCompletedService';
 import MediaOpenDoingService from '../services/Indicators/MediaOpenDoingService';
 import MediaDoingFinallyService from '../services/Indicators/MediaDoingFinallyService';
+import PerfomaceUserService from '../services/Indicators/PerfomaceUserService';
 
 class IndicatorController {
   async tasksCompleted(req, res) {
@@ -37,6 +38,16 @@ class IndicatorController {
     const tasks = await mediaDoingFinallyService.execute();
 
     return res.json(tasks);
+  }
+
+  async performaceUsers(req, res) {
+    const { date_initial, date_final } = req.query;
+
+    const perfomaceUserService = new PerfomaceUserService();
+
+    const users = await perfomaceUserService.execute({ date_initial, date_final });
+
+    return res.json(users);
   }
 }
 
