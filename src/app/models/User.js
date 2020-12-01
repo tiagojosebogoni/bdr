@@ -14,6 +14,11 @@ class User extends Model {
 
     return this;
   }
+
+  static associate(models) {
+    // this.belongsTo(models.Task, { foreignKey: 'user_id', as: 'tasks' });
+    this.hasMany(models.Task, { foreignKey: 'user_id', as: 'tasks' });
+  }
 }
 
 export default User;

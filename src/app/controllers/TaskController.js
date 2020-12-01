@@ -46,20 +46,6 @@ class TaskController {
       return res.status(404).json({ error });
     }
   }
-
-  async delete(req, res) {
-    /* const { id } = req.params;
-
-    const deleteUserService = new DeleteUserService();
-
-    try {
-      await deleteUserService.execute({ id });
-
-      return res.json();
-    } catch (er) {
-      return res.status(404).json({ error: 'User not found!' });
-    } */
-  }
 }
 
 export default new TaskController();
